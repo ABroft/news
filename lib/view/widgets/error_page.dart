@@ -4,11 +4,9 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'news_loader.dart';
 
 class ErrorPage extends StatelessWidget {
-  ErrorPage(
-      {Key? key,
-      String? errorMessage ,
-      required this.refresh})
-      : errorMessage = errorMessage ?? "Сервер недоступен", super(key: key);
+  ErrorPage({Key? key, String? errorMessage, required this.refresh})
+      : errorMessage = errorMessage ?? "Сервер недоступен",
+        super(key: key);
 
   final Function refresh;
   final RefreshController _refreshController =

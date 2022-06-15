@@ -25,7 +25,6 @@ class Picture extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return ClipRRect(
         borderRadius: BorderRadius.all(Radius.circular(radius)),
         child: CachedNetworkImage(
@@ -37,6 +36,6 @@ class Picture extends StatelessWidget {
           width: width,
           height: height,
           fit: fit,
-        ) );
+        ));
   }
 }

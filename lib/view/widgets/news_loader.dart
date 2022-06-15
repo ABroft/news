@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class NewsLoader extends StatefulWidget {
   const NewsLoader(
       {Key? key,

@@ -22,7 +22,7 @@ class NewsBody extends StatelessWidget {
         : Text(
             parse(parse(newsItem.text).body?.text).documentElement?.text ?? '');
     final List<String>? urlList = newsItem.additionalImagesPaths;
-  
+
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 2),
       padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),

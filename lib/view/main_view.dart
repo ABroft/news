@@ -65,9 +65,12 @@ class MainView extends StatelessWidget {
                     }),
               );
             } else if (state.status.isFailure) {
-              return ErrorPage(refresh: () {
-                BlocProvider.of<NewsCubit>(context).fetchNews();
-              }, errorMessage: state.error,);
+              return ErrorPage(
+                refresh: () {
+                  BlocProvider.of<NewsCubit>(context).fetchNews();
+                },
+                errorMessage: state.error,
+              );
             } else {
               return Center(
                   child: NewsLoader(

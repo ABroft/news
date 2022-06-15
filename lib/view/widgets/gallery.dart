@@ -12,22 +12,21 @@ class Gallery extends StatelessWidget {
     return SizedBox(
       height: 250,
       child: PhotoViewGallery.builder(
-        scrollPhysics: const BouncingScrollPhysics(),
-        builder: (BuildContext context, int index) {
-          return PhotoViewGalleryPageOptions(
-            imageProvider: NetworkImage(urlList[index]),
-            initialScale: PhotoViewComputedScale.contained * 0.8,
-            maxScale: PhotoViewComputedScale.covered * 2.4,
-            
-          );
-        },
-        itemCount: urlList.length,
-        loadingBuilder: (context, event) =>
-            const NewsLoader(maxIconSize: 50, durationMilliseconds: 900),
-        allowImplicitScrolling: true,
-        backgroundDecoration:
-            BoxDecoration(color: Theme.of(context).primaryColor, )    
-      ),
+          scrollPhysics: const BouncingScrollPhysics(),
+          builder: (BuildContext context, int index) {
+            return PhotoViewGalleryPageOptions(
+              imageProvider: NetworkImage(urlList[index]),
+              initialScale: PhotoViewComputedScale.contained * 0.8,
+              maxScale: PhotoViewComputedScale.covered * 2.4,
+            );
+          },
+          itemCount: urlList.length,
+          loadingBuilder: (context, event) =>
+              const NewsLoader(maxIconSize: 50, durationMilliseconds: 900),
+          allowImplicitScrolling: true,
+          backgroundDecoration: BoxDecoration(
+            color: Theme.of(context).primaryColor,
+          )),
     );
   }
 }

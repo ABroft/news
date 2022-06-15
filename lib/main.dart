@@ -15,8 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => NewsCubit(NewsRepository())
-                 ..fetchNews() ,
+      create: (context) => NewsCubit(NewsRepository())..fetchNews(),
       child: MaterialApp(
         title: 'News test',
         theme: ThemeData(

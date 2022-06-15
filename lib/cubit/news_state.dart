@@ -12,23 +12,20 @@ extension NewsStatusG on NewsStatus {
   bool get isLoading => this == NewsStatus.loading;
   bool get isSuccess => this == NewsStatus.success;
   bool get isFailure => this == NewsStatus.failure;
-  }
+}
 
-  class NewsState extends Equatable {
-const NewsState({
-    this.status = NewsStatus.initial,
-    this.newsList = const [],
-    this.error
-  });
+class NewsState extends Equatable {
+  const NewsState(
+      {this.status = NewsStatus.initial, this.newsList = const [], this.error});
 
-   final NewsStatus status;
-   final List<News> newsList;
-   final String? error;
+  final NewsStatus status;
+  final List<News> newsList;
+  final String? error;
 
-    NewsState copyWith({
+  NewsState copyWith({
     NewsStatus? status,
     List<News>? newsList,
-     String? error,
+    String? error,
   }) {
     return NewsState(
       status: status ?? this.status,
@@ -36,8 +33,9 @@ const NewsState({
       error: error ?? this.error,
     );
   }
-  
 
- @override 
-   List<Object> get props => [status,];
-  }
+  @override
+  List<Object> get props => [
+        status,
+      ];
+}

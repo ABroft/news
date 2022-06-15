@@ -31,5 +31,4 @@ class News {
         additionalImagesPaths: json['AdditionalImagesPaths'] as List<dynamic>?,
         language: json['Language'] as String?,
       );
-
 }
